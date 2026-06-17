@@ -1,0 +1,120 @@
+[
+  {
+    "slug": "kalkaji",
+    "city": "Delhi",
+    "name": "Delhi (Kalkaji)",
+    "tagline": "Our flagship study hub in the heart of South Delhi.",
+    "address": "B-15A, Basement, B-Block, Kalkaji, New Delhi – 110019",
+    "accentColor": "#1064c7",
+    "status": "Open Now",
+    "statusType": "open",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.076!2d77.259!3d28.550!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce36b9f000001%3A0x1!2sKalkaji%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1700000000000",
+    "hours": [
+      { "label": "Member Access", "value": "6 AM – 11 PM, Daily" },
+      { "label": "Staff Available", "value": "Mon–Sat, 9 AM – 6 PM" }
+    ],
+    "gettingHere": [
+      { "icon": "metro", "text": "Nearest Metro: Kalkaji Mandir (Violet Line)" },
+      { "icon": "bus",   "text": "Multiple bus routes available nearby" },
+      { "icon": "park",  "text": "Limited street parking available" }
+    ],
+    "stats": [
+      { "label": "Capacity",     "value": "25 Students" },
+      { "label": "Workstations", "value": "20" },
+      { "label": "Internet",     "value": "Dual High-Speed" }
+    ],
+    "facilities": [
+      "Air-Conditioned Study Areas",
+      "Small Pantry",
+      "Meeting Room",
+      "Secure Environment",
+      "Adjacent to Metro Stations",
+      "Fully-Equipped Computer Systems"
+    ],
+    "highlights": [
+      { "label": "Open Hours",    "value": "6 AM – 11 PM" },
+      { "label": "Days Open",     "value": "365 / year" },
+      { "label": "Nearest Metro", "value": "Kalkaji Mandir" }
+    ],
+    "email": "studyzone365.kalkaji@gmail.com",
+    "phone": "+91 93556 23363"
+  },
+  {
+    "slug": "kalyan-nagar",
+    "city": "Bangalore",
+    "name": "Bangalore (Kalyan Nagar)",
+    "tagline": "A modern study environment in the vibrant neighbourhood of Kalyan Nagar.",
+    "address": "28, 5th D Main Rd, HRBR Layout 2nd Block, Kalyan Nagar, Bengaluru, Karnataka – 560043",
+    "accentColor": "#f33255",
+    "status": "Open Now",
+    "statusType": "open",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.529!2d77.638!3d13.021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17b0e1c3a7f5%3A0x1!2sKalyan+Nagar%2C+Bengaluru!5e0!3m2!1sen!2sin!4v1700000000001",
+    "hours": [
+      { "label": "Member Access", "value": "6 AM – 11 PM, Daily" },
+      { "label": "Staff Available", "value": "Mon–Sat, 9 AM – 6 PM" }
+    ],
+    "gettingHere": [
+      { "icon": "bus",  "text": "Multiple bus routes available nearby" },
+      { "icon": "park", "text": "Limited parking available" },
+      { "icon": "land", "text": "Landmark: Near HRBR Layout" }
+    ],
+    "stats": [
+      { "label": "Capacity",     "value": "50 Students" },
+      { "label": "Workstations", "value": "35" },
+      { "label": "Internet",     "value": "Dual High-Speed" }
+    ],
+    "facilities": [
+      "Air-Conditioned Study Areas",
+      "Meeting Room",
+      "Secure Environment",
+      "24/7 Security",
+      "Fully-Equipped Computer Systems"
+    ],
+    "highlights": [
+      { "label": "Open Hours",       "value": "6 AM – 11 PM" },
+      { "label": "Days Open",        "value": "365 / year" },
+      { "label": "Nearest Landmark", "value": "Kalyan Nagar Bus Stop" }
+    ],
+    "email": "studyzone365.blr.1@gmail.com",
+    "phone": "+91 93556 23363"
+  },
+  {
+    "slug": "sarjapur",
+    "city": "Bangalore",
+    "name": "Bangalore (Sarjapur Road)",
+    "tagline": "Spacious, well-equipped study spaces for Bangalore's driven learners.",
+    "address": "54, 1st Floor, Owners Court Layout East, Hosa Road, Kasavanahalli, Bengaluru – 560035",
+    "accentColor": "#201657",
+    "status": "Open Now",
+    "statusType": "open",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.699!3d12.893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c12345abcde%3A0x1!2sSarjapur+Road%2C+Bengaluru!5e0!3m2!1sen!2sin!4v1700000000002",
+    "hours": [
+      { "label": "Member Access", "value": "6 AM – 11 PM, Daily" },
+      { "label": "Staff Available", "value": "Mon–Sat, 9 AM – 6 PM" }
+    ],
+    "gettingHere": [
+      { "icon": "bus",  "text": "Multiple bus routes on Sarjapur Road" },
+      { "icon": "park", "text": "Parking available in the complex" },
+      { "icon": "land", "text": "Landmark: Sarjapur Road Junction" }
+    ],
+    "stats": [
+      { "label": "Capacity",     "value": "65 Students" },
+      { "label": "Workstations", "value": "60" },
+      { "label": "Internet",     "value": "Dual High-Speed" }
+    ],
+    "facilities": [
+      "Air-Conditioned Study Areas",
+      "Conference Room",
+      "Secure Environment",
+      "24/7 Security",
+      "Fully-Equipped Computer Systems"
+    ],
+    "highlights": [
+      { "label": "Open Hours",       "value": "6 AM – 11 PM" },
+      { "label": "Days Open",        "value": "365 / year" },
+      { "label": "Nearest Landmark", "value": "Sarjapur Road Junction" }
+    ],
+    "email": "studyzone365.blr.2@gmail.com",
+    "phone": "+91 93556 23363"
+  }
+]
