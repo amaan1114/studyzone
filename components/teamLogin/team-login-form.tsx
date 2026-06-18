@@ -5,7 +5,7 @@ import { Check, Eye, EyeOff, Lock, LogIn, User } from "lucide-react";
 import { useState } from "react";
 
 const inputBase =
-  "w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 shadow-sm outline-none transition-all duration-200 focus:border-[#f33255] focus:ring-2 focus:ring-[#f33255]/15";
+  "w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 shadow-sm outline-none transition-all duration-200 focus:border-[#0e7de8] focus:ring-2 focus:ring-[#0e7de8]/15";
 
 const labelBase = "mb-1.5 block text-sm font-semibold text-slate-700 dark:text-slate-300";
 
@@ -33,10 +33,10 @@ export function TeamLoginForm() {
     return (
       <section className="relative flex min-h-[calc(100vh-4.5rem)] items-center justify-center overflow-hidden bg-[#f8fafc] dark:bg-slate-800 py-16">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/10 blur-3xl" />
-        <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/10 blur-3xl" />
+        <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/10 blur-3xl" />
         <motion.div initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center">
-          <div className="mx-auto flex size-20 items-center justify-center rounded-full bg-[#f33255]/10">
-            <Check className="size-10 text-[#f33255]" />
+          <div className="mx-auto flex size-20 items-center justify-center rounded-full bg-[#0e7de8]/10">
+            <Check className="size-10 text-[#0e7de8]" />
           </div>
           <h2 className="mt-6 text-3xl font-bold text-[#201657] dark:text-white">Welcome back!</h2>
           <p className="mt-3 text-slate-500 dark:text-slate-400">You&apos;re signed in to the team portal.</p>
@@ -48,16 +48,16 @@ export function TeamLoginForm() {
   return (
     <section className="relative overflow-hidden bg-[#f8fafc] dark:bg-slate-800 py-16 sm:py-20 lg:py-24">
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/10 blur-3xl" />
       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#1064c7] to-transparent opacity-30" />
 
       <div className="relative mx-auto max-w-md px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-center">
           <p className="text-xl font-semibold tracking-tight leading-none">
             <span className="text-[#201657] dark:text-white font-bold">STUDYZONE</span>
-            <span className="text-[#f33255]">365</span>
+            <span className="text-[#0e7de8]">365</span>
           </p>
-          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#f33255]">Team Portal</p>
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#0e7de8]">Team Portal</p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-4xl">
             Team Login
           </h1>
@@ -72,7 +72,7 @@ export function TeamLoginForm() {
           transition={{ delay: 0.08 }}
           className="mt-10 overflow-hidden rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-[0_14px_40px_rgba(15,23,42,0.07)]"
         >
-          <div className="h-1 w-full bg-linear-to-r from-[#1064c7] via-[#f33255] to-[#201657]" />
+          <div className="h-1 w-full bg-linear-to-r from-[#1064c7] via-[#0e7de8] to-[#201657]" />
 
           <form className="space-y-6 p-7 sm:p-9" onSubmit={submit}>
             <div>
@@ -113,7 +113,7 @@ export function TeamLoginForm() {
             </div>
 
             {error && (
-              <div className="rounded-2xl border border-[#f33255]/20 bg-[#f33255]/5 px-4 py-3 text-sm text-[#f33255]">
+              <div className="rounded-2xl border border-[#0e7de8]/20 bg-[#0e7de8]/5 px-4 py-3 text-sm text-[#0e7de8]">
                 {error}
               </div>
             )}
@@ -121,7 +121,7 @@ export function TeamLoginForm() {
             <div className="flex items-center justify-between">
               <button
                 type="button"
-                className="text-xs font-semibold text-slate-500 dark:text-slate-400 transition-colors hover:text-[#f33255]"
+                className="text-xs font-semibold text-slate-500 dark:text-slate-400 transition-colors hover:text-[#0e7de8]"
               >
                 Forgot password?
               </button>
@@ -130,7 +130,7 @@ export function TeamLoginForm() {
 
             <button
               type="submit"
-              className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#f33255] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(243,50,85,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e62c4d] active:scale-[0.98]"
+              className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#0e7de8] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(14,125,232,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0a6fd4] active:scale-[0.98]"
             >
               <LogIn className="size-4" />
               Sign In
@@ -141,4 +141,3 @@ export function TeamLoginForm() {
     </section>
   );
 }
-

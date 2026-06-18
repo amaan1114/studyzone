@@ -32,9 +32,9 @@ const highlights = [
 export function AboutUsHero() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900">
-      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/8 via-white dark:via-slate-900 to-[#f33255]/8" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/8 via-white dark:via-slate-900 to-[#0e7de8]/8" />
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/10 blur-3xl" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <motion.div
@@ -46,9 +46,9 @@ export function AboutUsHero() {
           <div className="max-w-2xl">
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 rounded-full border border-[#f33255]/15 bg-white/80 dark:bg-slate-800/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#f33255] shadow-sm backdrop-blur"
+              className="inline-flex items-center gap-2 rounded-full border border-[#0e7de8]/15 bg-white/80 dark:bg-slate-800/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0e7de8] shadow-sm backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-[#f33255]" />
+              <span className="h-2 w-2 rounded-full bg-[#0e7de8]" />
               About StudyZone365
             </motion.div>
 
@@ -74,7 +74,7 @@ export function AboutUsHero() {
             >
               <a
                 href="#story"
-                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#f33255] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(243,50,85,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e62c4d] active:scale-[0.98]"
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#0e7de8] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(14,125,232,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0a6fd4] active:scale-[0.98]"
               >
                 Learn More
                 <ArrowRight className="size-4" />
@@ -82,7 +82,7 @@ export function AboutUsHero() {
 
               <a
                 href="#centers"
-                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255] active:scale-[0.98]"
+                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8] active:scale-[0.98]"
               >
                 Explore Centers
               </a>
@@ -112,7 +112,7 @@ export function AboutUsHero() {
                             {highlight.label}
                           </p>
                         </div>
-                        <div className="flex size-12 items-center justify-center rounded-full bg-[#f33255]/10 text-[#f33255]">
+                        <div className="flex size-12 items-center justify-center rounded-full bg-[#0e7de8]/10 text-[#0e7de8]">
                           <Icon className="size-5" />
                         </div>
                       </div>

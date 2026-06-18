@@ -1,0 +1,129 @@
+[
+  {
+    "id": "grade-8-math-foundation",
+    "title": "Grade 8 Mathematics Foundation",
+    "category": "Academic",
+    "description": "Build strong mathematical concepts with structured classroom learning and personalized guidance.",
+    "availableCenters": [
+      "kalkaji",
+      "sarjapur"
+    ],
+    "duration": "6 Months",
+    "image": "/courses/math-foundation.jpg",
+    "brochure": "/brochures/grade-8-math.pdf"
+  },
+  {
+    "id": "grade-10-science-program",
+    "title": "Grade 10 Science Excellence Program",
+    "category": "Academic",
+    "description": "Focused science learning program covering Physics, Chemistry and Biology fundamentals.",
+    "availableCenters": [
+      "kalyan-nagar",
+      "sarjapur"
+    ],
+    "duration": "8 Months",
+    "image": "/courses/science.jpg",
+    "brochure": "/brochures/science-program.pdf"
+  },
+  {
+    "id": "grade-11-12-commerce",
+    "title": "Senior Secondary Commerce Program",
+    "category": "Academic",
+    "description": "Complete commerce learning program covering Accountancy, Economics and Business Studies.",
+    "availableCenters": [
+      "kalkaji"
+    ],
+    "duration": "12 Months",
+    "image": "/courses/commerce.jpg",
+    "brochure": "/brochures/commerce.pdf"
+  },
+  {
+    "id": "coding-foundation",
+    "title": "Coding Foundation Program",
+    "category": "Technology & Skills",
+    "description": "Introduction to programming, logical thinking and problem solving through hands-on projects.",
+    "availableCenters": [
+      "kalkaji",
+      "sarjapur",
+      "kalyan-nagar"
+    ],
+    "duration": "3 Months",
+    "image": "/courses/coding.jpg",
+    "brochure": "/brochures/coding-foundation.pdf"
+  },
+  {
+    "id": "ai-for-students",
+    "title": "AI & Future Skills Program",
+    "category": "Technology & Skills",
+    "description": "Learn artificial intelligence concepts, AI tools and future-ready technology skills.",
+    "availableCenters": [
+      "sarjapur"
+    ],
+    "duration": "3 Months",
+    "image": "/courses/ai.jpg",
+    "brochure": "/brochures/ai-skills.pdf"
+  },
+  {
+    "id": "web-development",
+    "title": "Web Development Bootcamp",
+    "category": "Technology & Skills",
+    "description": "Learn website development using modern technologies through practical project-based learning.",
+    "availableCenters": [
+      "kalyan-nagar"
+    ],
+    "duration": "4 Months",
+    "image": "/courses/web-development.jpg",
+    "brochure": "/brochures/web-development.pdf"
+  },
+  {
+    "id": "python-programming",
+    "title": "Python Programming Course",
+    "category": "Technology & Skills",
+    "description": "Master Python fundamentals, automation and programming concepts through guided learning.",
+    "availableCenters": [
+      "kalkaji",
+      "kalyan-nagar"
+    ],
+    "duration": "3 Months",
+    "image": "/courses/python.jpg",
+    "brochure": "/brochures/python.pdf"
+  },
+  {
+    "id": "executive-management",
+    "title": "Executive Management Program",
+    "category": "Executive Education",
+    "description": "Professional learning program designed for managers and working professionals.",
+    "availableCenters": [
+      "kalkaji",
+      "sarjapur"
+    ],
+    "duration": "12 Months",
+    "image": "/courses/executive-management.jpg",
+    "brochure": "/brochures/executive-management.pdf"
+  },
+  {
+    "id": "leadership-development",
+    "title": "Leadership Development Program",
+    "category": "Executive Education",
+    "description": "Enhance leadership, decision-making and management capabilities through structured sessions.",
+    "availableCenters": [
+      "sarjapur"
+    ],
+    "duration": "6 Months",
+    "image": "/courses/leadership.jpg",
+    "brochure": "/brochures/leadership.pdf"
+  },
+  {
+    "id": "business-analytics",
+    "title": "Business Analytics Program",
+    "category": "Executive Education",
+    "description": "Learn analytics, business intelligence and data-driven decision making skills.",
+    "availableCenters": [
+      "kalyan-nagar",
+      "sarjapur"
+    ],
+    "duration": "6 Months",
+    "image": "/courses/business-analytics.jpg",
+    "brochure": "/brochures/business-analytics.pdf"
+  }
+]

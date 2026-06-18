@@ -41,14 +41,14 @@ const contactCards = [
     label: "Email",
     value: "info@studyzone365.com",
     href: "mailto:info@studyzone365.com",
-    accentColor: "#f33255",
+    accentColor: "#0e7de8",
     note: "We reply within 24 hours",
   },
   {
     icon: MapPin,
     label: "Centers",
     value: "Delhi & Bangalore",
-    href: "/our-center",
+    href: "/centers",
     accentColor: "#201657",
     note: "3 locations across India",
   },
@@ -66,9 +66,9 @@ export function ContactHero() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900">
       {/* Background */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/6 via-white dark:via-slate-900 to-[#f33255]/6" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/6 via-white dark:via-slate-900 to-[#0e7de8]/6" />
       <div className="absolute -left-20 top-10 h-80 w-80 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#0e7de8]/10 blur-3xl" />
       <div className="absolute right-1/3 top-1/3 h-60 w-60 rounded-full bg-[#201657]/5 blur-3xl" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -85,7 +85,7 @@ export function ContactHero() {
               variants={itemVariants}
               className="inline-flex items-center gap-2 rounded-full border border-[#1064c7]/15 bg-white/80 dark:bg-slate-800/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#1064c7] shadow-sm backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-[#f33255]" />
+              <span className="h-2 w-2 rounded-full bg-[#0e7de8]" />
               Get in Touch
             </motion.div>
 
@@ -95,7 +95,7 @@ export function ContactHero() {
               className="mt-6 text-4xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-5xl lg:text-6xl"
             >
               We'd love to{" "}
-              <span className="text-[#f33255]">hear</span>{" "}
+              <span className="text-[#0e7de8]">hear</span>{" "}
               from you.
             </motion.h1>
 
@@ -122,9 +122,9 @@ export function ContactHero() {
               </a>
               <a
                 href="mailto:info@studyzone365.com"
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-300 shadow-sm transition-colors hover:border-[#f33255] hover:text-[#f33255]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-300 shadow-sm transition-colors hover:border-[#0e7de8] hover:text-[#0e7de8]"
               >
-                <Mail className="size-3.5 text-[#f33255]" />
+                <Mail className="size-3.5 text-[#0e7de8]" />
                 info@studyzone365.com
               </a>
             </motion.div>
@@ -136,15 +136,15 @@ export function ContactHero() {
             >
               <a
                 href="#contact-form"
-                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#f33255] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(243,50,85,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e62c4d] active:scale-[0.98]"
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#0e7de8] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(14,125,232,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0a6fd4] active:scale-[0.98]"
               >
                 <MessageSquare className="size-4" />
                 Send a Message
                 <ArrowRight className="size-4" />
               </a>
               <a
-                href="/our-center"
-                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255] active:scale-[0.98]"
+                href="/centers"
+                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8] active:scale-[0.98]"
               >
                 <MapPin className="size-4" />
                 Visit a Center
@@ -175,7 +175,7 @@ export function ContactHero() {
                         >
                           <Icon className="size-4" style={{ color: card.accentColor }} />
                         </div>
-                        <ArrowRight className="size-3.5 text-slate-300 transition-colors group-hover:text-[#f33255]" />
+                        <ArrowRight className="size-3.5 text-slate-300 transition-colors group-hover:text-[#0e7de8]" />
                       </div>
                       <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: card.accentColor }}>
                         {card.label}

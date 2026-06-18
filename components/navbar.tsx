@@ -1,38 +1,40 @@
 "use client";
 
-import { ChevronDown, User, MapPin, Menu, X } from "lucide-react";
+import { ChevronDown, User, MapPin, Menu, Phone, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "../components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 
+const SUPPORT_NUMBER = "+91 93556 23363";
+const SUPPORT_TEL = "tel:+919355623363";
+
 const centerDropdownItems = [
   {
     label: "Delhi (Kalkaji)",
     area: "B-Block, Kalkaji, New Delhi",
-    href: "/our-center/kalkaji",
+    href: "/centers/kalkaji",
     color: "#1064c7",
   },
   {
     label: "Bangalore (Kalyan Nagar)",
     area: "HRBR Layout, Kalyan Nagar",
-    href: "/our-center/kalyan-nagar",
-    color: "#f33255",
+    href: "/centers/kalyan-nagar",
+    color: "#0e7de8",
   },
   {
     label: "Bangalore (Sarjapur Road)",
     area: "Kasavanahalli, Bengaluru",
-    href: "/our-center/sarjapur",
+    href: "/centers/sarjapur",
     color: "#201657",
   },
 ];
 
 const navLinks = [
-  { label: "Centers", hasDropdown: true, href: "/our-center" },
+  { label: "Programs", href: "/programs" },
+  { label: "Centers", hasDropdown: true, href: "/centers" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Feedback", href: "/feedback" },
-  { label: "Contact Us", href: "/contact-us" },
-  { label: "About Us", href: "/aboutUs" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -84,7 +86,7 @@ export function Navbar() {
           <div className="shrink-0 space-y-0.5 cursor-pointer" onClick={() => navigate("/")}>
             <p className="text-xl font-semibold tracking-tight leading-none">
               <span className="text-[#201657] dark:text-white font-bold">STUDYZONE</span>
-              <span className="text-[#f33255]">365</span>
+              <span className="text-[#0e7de8]">365</span>
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400 sm:text-sm leading-none">
               Your space for live learning
@@ -104,7 +106,7 @@ export function Navbar() {
                   <button
                     type="button"
                     onClick={() => navigate(link.href!)}
-                    className="group flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors hover:bg-white dark:hover:bg-slate-700 hover:text-[#d92a49] cursor-pointer active:scale-[0.98]"
+                    className="group flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors hover:bg-white dark:hover:bg-slate-700 hover:text-[#0a6fd4] cursor-pointer active:scale-[0.98]"
                   >
                     {link.label}
                     <ChevronDown
@@ -147,8 +149,8 @@ export function Navbar() {
                         <div className="mt-1 border-t border-slate-100 dark:border-slate-700/50 pt-1">
                           <button
                             type="button"
-                            onClick={() => navigate("/our-center")}
-                            className="flex w-full items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-semibold text-[#f33255] transition-colors hover:bg-[#f33255]/6"
+                            onClick={() => navigate("/centers")}
+                            className="flex w-full items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-semibold text-[#0e7de8] transition-colors hover:bg-[#0e7de8]/6"
                           >
                             View all centers
                             <ChevronDown className="size-3 -rotate-90" />
@@ -162,7 +164,7 @@ export function Navbar() {
                 <button
                   key={link.label}
                   type="button"
-                  className="group flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors hover:bg-white dark:hover:bg-slate-700 hover:text-[#d92a49] cursor-pointer active:scale-[0.98]"
+                  className="group flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors hover:bg-white dark:hover:bg-slate-700 hover:text-[#0a6fd4] cursor-pointer active:scale-[0.98]"
                   onClick={() => link.href && navigate(link.href)}
                 >
                   {link.label}
@@ -173,10 +175,21 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+            <a
+              href={SUPPORT_TEL}
+              className="hidden lg:inline-flex items-center gap-2 rounded-full border border-[#0e7de8]/15 dark:border-[#0e7de8]/20 bg-[#0e7de8]/6 dark:bg-[#0e7de8]/10 px-3.5 py-2 text-sm font-semibold text-[#0e7de8] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0e7de8] hover:text-white active:scale-[0.98]"
+            >
+              <span className="flex size-7 items-center justify-center rounded-full bg-white dark:bg-slate-900 text-[#0e7de8] shadow-sm">
+                <Phone className="size-3.5" />
+              </span>
+              <span className="hidden xl:inline">{SUPPORT_NUMBER}</span>
+              <span className="xl:hidden">Call Us</span>
+            </a>
+
             <Button
               variant="outline"
               className="hidden h-9 rounded-md border-slate-300 dark:border-slate-600 px-4 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 dark:bg-slate-800 cursor-pointer active:scale-[0.98] sm:flex"
-              onClick={() => navigate("/team-login")}
+              onClick={() => navigate("/Login")}
             >
               <User className="size-4" />
               Login
@@ -190,7 +203,7 @@ export function Navbar() {
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((o) => !o)}
-              className="flex size-9 items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 shadow-sm transition-colors hover:border-[#f33255] hover:text-[#f33255] xl:hidden"
+              className="flex size-9 items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 shadow-sm transition-colors hover:border-[#0e7de8] hover:text-[#0e7de8] xl:hidden"
             >
               {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
             </button>
@@ -219,7 +232,7 @@ export function Navbar() {
           <div className="space-y-0.5">
             <p className="text-lg font-bold leading-none">
               <span className="text-[#201657] dark:text-white">STUDYZONE</span>
-              <span className="text-[#f33255]">365</span>
+              <span className="text-[#0e7de8]">365</span>
             </p>
             <p className="text-[11px] text-slate-400 dark:text-slate-500">Your space for live learning</p>
           </div>
@@ -243,7 +256,7 @@ export function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileCentersOpen((o) => !o)}
-                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#d92a49]"
+                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#0a6fd4]"
                   >
                     Centers
                     <ChevronDown
@@ -259,8 +272,8 @@ export function Navbar() {
                       <li>
                         <button
                           type="button"
-                          onClick={() => navigate("/our-center")}
-                          className="w-full rounded-xl px-4 py-2.5 text-left text-xs font-semibold text-[#f33255] transition-colors hover:bg-[#f33255]/6"
+                          onClick={() => navigate("/centers")}
+                          className="w-full rounded-xl px-4 py-2.5 text-left text-xs font-semibold text-[#0e7de8] transition-colors hover:bg-[#0e7de8]/6"
                         >
                           All Centers →
                         </button>
@@ -293,7 +306,7 @@ export function Navbar() {
                   <button
                     type="button"
                     onClick={() => link.href && navigate(link.href)}
-                    className="w-full rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#d92a49]"
+                    className="w-full rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#0a6fd4]"
                   >
                     {link.label}
                   </button>
@@ -304,11 +317,26 @@ export function Navbar() {
         </nav>
 
         {/* Panel footer */}
-        <div className="border-t border-slate-100 dark:border-slate-700/50 px-5 py-4">
+        <div className="border-t border-slate-100 dark:border-slate-700/50 px-5 py-4 space-y-3">
+          <a
+            href={SUPPORT_TEL}
+            className="flex w-full items-center justify-between rounded-2xl border border-[#0e7de8]/15 dark:border-[#0e7de8]/20 bg-[#0e7de8]/6 dark:bg-[#0e7de8]/10 px-4 py-3 text-left text-[#0e7de8] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0e7de8] hover:text-white"
+          >
+            <div className="flex items-center gap-3">
+              <span className="flex size-10 items-center justify-center rounded-full bg-white dark:bg-slate-900 shadow-sm">
+                <Phone className="size-4" />
+              </span>
+              <span>
+                <span className="block text-[11px] font-semibold uppercase tracking-[0.22em] opacity-70">Call Us</span>
+                <span className="block text-sm font-semibold">{SUPPORT_NUMBER}</span>
+              </span>
+            </div>
+          </a>
+
           <button
             type="button"
-            onClick={() => navigate("/team-login")}
-            className="flex w-full items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-5 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255]"
+            onClick={() => navigate("/Login")}
+            className="flex w-full items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-5 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8]"
           >
             <User className="size-4" />
             Login

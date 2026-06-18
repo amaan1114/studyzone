@@ -47,8 +47,8 @@ const itemVariants = {
 export function CoreValuesSection() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900 py-20 sm:py-24 lg:py-28">
-      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f33255] to-transparent opacity-70" />
-      <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#0e7de8] to-transparent opacity-70" />
+      <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#0e7de8]/10 blur-3xl" />
       <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#1064c7]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export function CoreValuesSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div variants={itemVariants} className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#f33255]">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0e7de8]">
               Our Core Values
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-4xl lg:text-5xl">
@@ -75,9 +75,9 @@ export function CoreValuesSection() {
                 <motion.article
                   key={value.title}
                   variants={itemVariants}
-                  className="group rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-[#f8fafc] dark:bg-slate-800 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f33255]/25 hover:bg-white dark:hover:bg-slate-700 hover:shadow-[0_22px_55px_rgba(15,23,42,0.08)]"
+                  className="group rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-[#f8fafc] dark:bg-slate-800 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0e7de8]/25 hover:bg-white dark:hover:bg-slate-700 hover:shadow-[0_22px_55px_rgba(15,23,42,0.08)]"
                 >
-                  <div className="flex size-14 items-center justify-center rounded-2xl bg-white dark:bg-slate-900 text-[#f33255] shadow-sm transition-transform duration-300 group-hover:scale-105">
+                  <div className="flex size-14 items-center justify-center rounded-2xl bg-white dark:bg-slate-900 text-[#0e7de8] shadow-sm transition-transform duration-300 group-hover:scale-105">
                     <Icon className="size-6" />
                   </div>
 

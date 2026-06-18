@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Chinmayee Baitharu",
+    "initials": "CB",
+    "occupation": "MBA",
+    "center": "Delhi (Kalkaji)",
+    "rating": 5,
+    "quote": "I would like to express my appreciation for the overall experience at the center. The environment is welcoming, well-organized, and conducive to learning and engagement. There is a strong emphasis on quality and a genuine effort to ensure participant satisfaction. I would gladly recommend the center to others."
+  },
+  {
+    "id": 2,
+    "name": "Arjun Mehta",
+    "initials": "AM",
+    "occupation": "UPSC Aspirant",
+    "center": "Delhi (Kalkaji)",
+    "rating": 5,
+    "quote": "StudyZone365 gave me the focused environment I was desperately looking for. The silence, the fast internet, and the dedicated desks made a huge difference to my daily study routine. I've been coming here for 6 months and my productivity has improved significantly."
+  },
+  {
+    "id": 3,
+    "name": "Priya Sharma",
+    "initials": "PS",
+    "occupation": "CA Final Student",
+    "center": "Bangalore (Kalyan Nagar)",
+    "rating": 5,
+    "quote": "The Kalyan Nagar center is exactly what I needed during my CA Finals prep. Clean, quiet, and fully equipped. The staff is supportive and the dual internet setup ensures there are no disruptions during online mock tests. Best study space I've ever used."
+  },
+  {
+    "id": 4,
+    "name": "Rohan Das",
+    "initials": "RD",
+    "occupation": "Software Engineer (Upskilling)",
+    "center": "Bangalore (Sarjapur Road)",
+    "rating": 5,
+    "quote": "I attend live online courses after work and needed a reliable, distraction-free space. Sarjapur Road center has been perfect — great connectivity, comfortable seating, and it's open late enough to fit my schedule. Totally worth it."
+  }
+]

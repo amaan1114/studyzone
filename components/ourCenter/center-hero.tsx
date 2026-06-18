@@ -28,7 +28,7 @@ const centers = [
   },
   {
     city: "Bangalore", area: "Koramangala & JP Nagar",
-    accentColor: "#f33255", bgAccent: "bg-[#f33255]/8",
+    accentColor: "#0e7de8", bgAccent: "bg-[#0e7de8]/8",
     description: "Modern study spaces designed for Bangalore's ambitious learners and working professionals.",
   },
 ];
@@ -36,9 +36,9 @@ const centers = [
 export function CenterHero() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900">
-      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/6 via-white dark:via-slate-900 to-[#f33255]/6" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/6 via-white dark:via-slate-900 to-[#0e7de8]/6" />
       <div className="absolute -left-20 top-10 h-80 w-80 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#0e7de8]/10 blur-3xl" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <motion.div variants={containerVariants} initial="hidden" animate="show"
@@ -47,13 +47,13 @@ export function CenterHero() {
           <div className="max-w-2xl">
             <motion.div variants={itemVariants}
               className="inline-flex items-center gap-2 rounded-full border border-[#1064c7]/15 bg-white/80 dark:bg-slate-800/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#1064c7] shadow-sm backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-[#f33255]" />
+              <span className="h-2 w-2 rounded-full bg-[#0e7de8]" />
               Our Study Centers
             </motion.div>
 
             <motion.h1 variants={itemVariants}
               className="mt-6 text-4xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-5xl lg:text-6xl">
-              Spaces built for{" "}<span className="text-[#f33255]">serious</span>{" "}learners.
+              Spaces built for{" "}<span className="text-[#0e7de8]">serious</span>{" "}learners.
             </motion.h1>
 
             <motion.p variants={itemVariants}
@@ -73,11 +73,11 @@ export function CenterHero() {
 
             <motion.div variants={itemVariants} className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#centers"
-                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#f33255] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(243,50,85,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e62c4d] active:scale-[0.98]">
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#0e7de8] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(14,125,232,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0a6fd4] active:scale-[0.98]">
                 Explore Centers <ArrowRight className="size-4" />
               </a>
               <a href="#amenities"
-                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255] active:scale-[0.98]">
+                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8] active:scale-[0.98]">
                 View Amenities
               </a>
             </motion.div>

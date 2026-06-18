@@ -3,9 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// ─── Gallery items ────────────────────────────────────────────────────────────
-// Images cycle from the available public/images assets.
-
 const images = [
   "/images/kalkaji-1.jpg",
   "/images/kn-1.jpeg",
@@ -26,13 +23,11 @@ const galleryItems = [
   { label: "24/7 Security" },
 ];
 
-// Assign images cyclically
 const tilesWithImages = galleryItems.map((item, i) => ({
   ...item,
   image: images[i % images.length],
 }));
 
-// Duplicate for seamless infinite loop
 const track = [...tilesWithImages, ...tilesWithImages];
 
 export function CenterGallery() {
@@ -40,8 +35,8 @@ export function CenterGallery() {
     <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
       {/* Decorators */}
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/8 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/8 blur-3xl" />
-      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f33255] to-transparent opacity-40" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/8 blur-3xl" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#0e7de8] to-transparent opacity-40" />
 
       {/* Header */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -52,7 +47,7 @@ export function CenterGallery() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#f33255]">
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0e7de8]">
             Inside the Space
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#201657] sm:text-4xl lg:text-5xl">
@@ -90,7 +85,6 @@ export function CenterGallery() {
               key={i}
               className="group relative h-72 w-96 shrink-0 overflow-hidden rounded-[1.5rem] shadow-[0_12px_32px_rgba(15,23,42,0.12)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_48px_rgba(15,23,42,0.18)] sm:h-80 sm:w-[26rem]"
             >
-              {/* Image */}
               <Image
                 src={item.image}
                 alt={item.label}
@@ -98,11 +92,7 @@ export function CenterGallery() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 640px) 384px, 416px"
               />
-
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-
-              {/* Label */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-base font-bold tracking-tight text-white drop-shadow-sm">
                   {item.label}

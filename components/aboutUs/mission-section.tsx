@@ -27,7 +27,7 @@ export function MissionSection() {
   return (
     <section className="relative overflow-hidden bg-[#f8fafc] dark:bg-slate-800 py-20 sm:py-24 lg:py-28">
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -39,7 +39,7 @@ export function MissionSection() {
         >
           <motion.div variants={itemVariants} className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#201657]/10 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#1064c7] shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-[#f33255]" />
+              <span className="h-2 w-2 rounded-full bg-[#0e7de8]" />
               Our Mission
             </div>
 
@@ -65,7 +65,7 @@ export function MissionSection() {
                   variants={itemVariants}
                   className="flex items-center gap-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)]"
                 >
-                  <Sparkles className="size-4 shrink-0 text-[#f33255]" />
+                  <Sparkles className="size-4 shrink-0 text-[#0e7de8]" />
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{point}</span>
                 </motion.div>
               ))}
@@ -80,7 +80,7 @@ export function MissionSection() {
                   <Target className="size-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#f33255]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0e7de8]">
                     Focus first
                   </p>
                   <h3 className="mt-2 text-2xl font-bold tracking-tight text-[#201657] dark:text-white">

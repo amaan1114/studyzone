@@ -1,4 +1,6 @@
 import { Hero } from "../components/landingPage/hero";
+import { ProgramCategories } from "../components/landingPage/program-categories";
+import { ProgramFinder } from "../components/landingPage/program-finder";
 import { WhatWeProvide } from "../components/landingPage/what-we-provide";
 import { StudyCenters } from "../components/landingPage/study-centers";
 import { StudentTestimonials } from "../components/landingPage/student-testimonials";
@@ -11,6 +13,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <ProgramCategories />
+      <ProgramFinder />
       <WhatWeProvide />
       <StudyCenters />
       <StudentTestimonials />
@@ -21,3 +25,4 @@ export default function Home() {
     </main>
   );
 }
+

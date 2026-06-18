@@ -10,8 +10,7 @@ interface Props {
 
 export function CenterDetailCta({ center }: Props) {
   return (
-    <section className="relative overflow-hidden bg-linear-to-r from-[#1064c7] via-[#5a3fa8] to-[#f33255] py-20 sm:py-24">
-      {/* Depth overlays */}
+    <section className="relative overflow-hidden bg-linear-to-r from-[#1064c7] via-[#0e7de8] to-[#0a6fd4] py-20 sm:py-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(255,255,255,0.08),transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_50%,rgba(0,0,0,0.12),transparent_60%)]" />
 
@@ -45,7 +44,7 @@ export function CenterDetailCta({ center }: Props) {
         >
           <a
             href={`tel:${center.phone.replace(/\s/g, "")}`}
-            className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#f33255] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e62c4d] active:scale-[0.98]"
+            className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#1064c7] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 active:scale-[0.98]"
           >
             Contact Us
             <ArrowRight className="size-4" />

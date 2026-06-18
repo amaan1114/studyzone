@@ -38,7 +38,7 @@ export function OpportunitySection() {
         >
           {/* Badge */}
           <motion.div variants={itemVariants}>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#f33255] px-4 py-2 text-sm font-semibold text-white">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0e7de8] px-4 py-2 text-sm font-semibold text-white">
               Limited Time Opportunity
             </span>
           </motion.div>

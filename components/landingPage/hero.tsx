@@ -3,13 +3,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import {
-  MapPin,
   Wifi,
   Volume2,
   Zap,
   Coffee,
   Check,
+  Download,
+  MapPin,
 } from "lucide-react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { Button } from "../ui/button";
 
@@ -28,34 +31,48 @@ const highlights = [
 ];
 
 export function Hero() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter()
+  const handleDownload = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.includes("@")) return;
+    // Trigger brochure download
+    const link = document.createElement("a");
+    link.href = "/brochure.pdf";
+    link.download = "StudyZone365-Brochure.pdf";
+    link.click();
+    setSubmitted(true);
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden border-b border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-900">
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
         {/* Background decorations */}
-        <div className="absolute -right-24 top-0 h-72 w-72 rounded-full bg-pink-200/70 blur-3xl" />
-        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-purple-200/60 blur-3xl" />
+        <div className="absolute -right-24 top-0 h-72 w-72 rounded-full bg-blue-200/70 blur-3xl" />
+        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-blue-200/60 blur-3xl" />
 
         {/* Additional background elements */}
         <div className="absolute top-1/3 right-1/4 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 h-96 w-96 rounded-full bg-pink-100/50 blur-2xl" />
+        <div className="absolute top-1/2 left-1/3 h-96 w-96 rounded-full bg-blue-100/50 blur-2xl" />
 
           {/* Soft ambient wash */}
-          <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-pink-50/60 via-white/20 to-transparent dark:from-pink-950/20 dark:via-transparent" />
+          <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-blue-50/60 via-white/20 to-transparent dark:from-blue-950/20 dark:via-transparent" />
 
           {/* Floating accent dots */}
           <div className="absolute right-16 top-16 grid grid-cols-3 gap-3 opacity-40">
-            <span className="size-2 rounded-full bg-pink-300" />
             <span className="size-2 rounded-full bg-blue-300" />
-            <span className="size-2 rounded-full bg-purple-300" />
-            <span className="size-2 rounded-full bg-purple-300" />
-            <span className="size-2 rounded-full bg-pink-300" />
+            <span className="size-2 rounded-full bg-blue-400" />
             <span className="size-2 rounded-full bg-blue-300" />
             <span className="size-2 rounded-full bg-blue-300" />
-            <span className="size-2 rounded-full bg-purple-300" />
-            <span className="size-2 rounded-full bg-pink-300" />
+            <span className="size-2 rounded-full bg-blue-400" />
+            <span className="size-2 rounded-full bg-blue-300" />
+            <span className="size-2 rounded-full bg-blue-400" />
+            <span className="size-2 rounded-full bg-blue-300" />
+            <span className="size-2 rounded-full bg-blue-400" />
           </div>
 
-          <div className="absolute bottom-16 left-10 h-24 w-24 rounded-full border border-pink-200/70 bg-white/50 shadow-[0_0_0_8px_rgba(244,114,182,0.06)] backdrop-blur-sm" />
+          <div className="absolute bottom-16 left-10 h-24 w-24 rounded-full border border-blue-200/70 bg-white/50 shadow-[0_0_0_8px_rgba(14,125,232,0.06)] backdrop-blur-sm" />
           <div className="absolute bottom-28 right-10 h-16 w-16 rounded-full border border-slate-200/70 bg-white/60 shadow-[0_0_0_6px_rgba(148,163,184,0.05)] backdrop-blur-sm" />
       </div>
 
@@ -68,9 +85,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-pink-200 bg-pink-50 dark:bg-pink-950/30 dark:border-pink-800/40 px-4 py-2">
-              <div className="size-2 rounded-full bg-pink-500" />
-              <span className="text-xs font-semibold tracking-wide text-pink-600 uppercase">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 dark:bg-blue-950/30 dark:border-blue-800/40 px-4 py-2">
+              <div className="size-2 rounded-full bg-[#0e7de8]" />
+              <span className="text-xs font-semibold tracking-wide text-[#0e7de8] uppercase">
                 #1 Learning Spaces in India
               </span>
             </div>
@@ -84,7 +101,7 @@ export function Hero() {
             >
               <span className="text-[#201657] dark:text-white">Your Space For,</span>
               <br />
-              <span className="text-[#f33255]"> Live Learning.</span>
+              <span className="text-[#0e7de8]"> Live Learning.</span>
             </motion.h1>
 
             {/* Description */}
@@ -121,22 +138,74 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3"
             >
               <Button
                 size="lg"
-                className="h-12 px-8 rounded-lg bg-[#f33255] text-white font-semibold hover:bg-[#d92a49] transition-colors cursor-pointer"
+                className="h-12 px-8 rounded-lg bg-[#0e7de8] text-white font-semibold hover:bg-[#0a6fd4] transition-colors cursor-pointer"
+                onClick={()=>{router.push('/programs')}}
               >
-                Explore Centers
+                Explore Programs
               </Button>
-             
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-12 px-8 rounded-lg border-2 border-[#201657] dark:border-slate-500 text-[#201657] dark:text-white font-semibold hover:bg-[#201657] hover:text-white dark:hover:bg-slate-700 transition-all cursor-pointer gap-2"
+                onClick={()=>{router.push('/centers')}}
+              >
+                <MapPin className="size-4" />
+                Find a Center
+              </Button>
+            </motion.div>
+
+            {/* Email + Download Brochure */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-6"
+            >
+              {submitted ? (
+                <div className="flex items-center gap-3 rounded-xl border border-blue-200 bg-blue-50 dark:bg-blue-950/30 dark:border-blue-800/40 px-4 py-3">
+                  <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#0e7de8]">
+                    <Check className="size-4 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[#201657] dark:text-white">Brochure downloading!</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">Check your downloads folder.</p>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={handleDownload} className="flex flex-col sm:flex-row gap-2">
+                  <div className="relative flex-1">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      required
+                      className="h-12 w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 pl-4 pr-4 text-sm text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none transition-colors focus:border-[#0e7de8] focus:ring-2 focus:ring-[#0e7de8]/20"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-[#201657] px-5 text-sm font-semibold text-white transition-all hover:bg-[#1a1248] active:scale-[0.98] cursor-pointer"
+                  >
+                    <Download className="size-4" />
+                    Download Brochure
+                  </button>
+                </form>
+              )}
+              <p className="mt-2 text-xs text-slate-400 dark:text-slate-500">
+                Free brochure · No spam, ever.
+              </p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="mt-8 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 px-4 py-3 shadow-sm backdrop-blur-sm"
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 px-4 py-3 shadow-sm backdrop-blur-sm"
             >
               <span className="rounded-full bg-slate-100 dark:bg-slate-700 px-3 py-1 text-xs font-semibold text-slate-700 dark:text-slate-300">
                 Delhi & Bangalore
@@ -182,7 +251,7 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   className="p-4 flex flex-col items-center gap-3 text-center"
                 >
-                  <div className="flex items-center justify-center size-12 rounded-lg bg-pink-100 dark:bg-pink-950/40 shrink-0">
+                  <div className="flex items-center justify-center size-12 rounded-lg bg-blue-100 dark:bg-blue-950/40 shrink-0">
                     <feature.icon className="size-6 text-slate-700 dark:text-slate-300" />
                   </div>
                   <div>

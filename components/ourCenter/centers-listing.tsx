@@ -23,8 +23,6 @@ import Link from "next/link";
 import centersData from "@/data/centers.json";
 import type { Center } from "@/types/center";
 
-// ─── Icon map for facility labels ────────────────────────────────────────────
-
 const facilityIconMap: Record<string, React.ElementType> = {
   "Air-Conditioned Study Areas": Wind,
   "Small Pantry": ShoppingBag,
@@ -44,8 +42,6 @@ const statIconMap: Record<string, React.ElementType> = {
 
 const centers = centersData as Center[];
 
-// ─── Animation variants ───────────────────────────────────────────────────────
-
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -63,21 +59,17 @@ const itemVariants = {
   },
 };
 
-// ─── Component ───────────────────────────────────────────────────────────────
-
 export function CentersListing() {
   return (
     <section
       id="centers"
       className="relative overflow-hidden bg-[#f8fafc] dark:bg-slate-800 py-20 sm:py-24 lg:py-28"
     >
-      {/* Decorative blobs */}
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/10 blur-3xl" />
       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#1064c7] to-transparent opacity-30" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +77,7 @@ export function CentersListing() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#f33255]">
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0e7de8]">
             All Locations
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-4xl lg:text-5xl">
@@ -97,7 +89,6 @@ export function CentersListing() {
           </p>
         </motion.div>
 
-        {/* Cards grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -116,7 +107,6 @@ export function CentersListing() {
                 className="rounded-t-[2rem] px-7 pt-7 pb-5"
                 style={{ backgroundColor: `${center.accentColor}12` }}
               >
-                {/* City pill */}
                 <span
                   className="inline-flex items-center gap-1.5 rounded-full border bg-white/70 dark:bg-slate-900/60 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em]"
                   style={{
@@ -128,7 +118,6 @@ export function CentersListing() {
                   {center.city}
                 </span>
 
-                {/* Center name */}
                 <h3
                   className="mt-3 text-xl font-bold tracking-tight"
                   style={{ color: center.accentColor }}
@@ -136,7 +125,6 @@ export function CentersListing() {
                   {center.name}
                 </h3>
 
-                {/* Address */}
                 <p className="mt-2 flex items-start gap-2 text-xs leading-5 text-slate-500">
                   <MapPin className="mt-0.5 size-3.5 shrink-0 text-slate-400" />
                   {center.address}
@@ -167,7 +155,6 @@ export function CentersListing() {
 
               {/* ── Body ── */}
               <div className="flex flex-1 flex-col gap-6 px-7 py-6">
-                {/* Facilities */}
                 <div>
                   <p
                     className="mb-3 text-xs font-bold uppercase tracking-[0.25em]"
@@ -191,10 +178,8 @@ export function CentersListing() {
                   </ul>
                 </div>
 
-                {/* Divider */}
                 <div className="h-px w-full bg-linear-to-r from-slate-200 via-slate-100 to-transparent dark:from-slate-700 dark:via-slate-800 dark:to-transparent" />
 
-                {/* Contact */}
                 <div>
                   <p
                     className="mb-3 text-xs font-bold uppercase tracking-[0.25em]"
@@ -224,19 +209,18 @@ export function CentersListing() {
                   </ul>
                 </div>
 
-                {/* CTA buttons */}
                 <div className="mt-auto flex gap-3">
                   <a
                     href={`tel:${center.phone.replace(/\s/g, "")}`}
-                    className="flex flex-1 items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255] active:scale-[0.98]"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8] active:scale-[0.98]"
                   >
                     <PhoneCall className="size-4" />
                     Contact Us
                   </a>
                   <Link
-                    href={`/our-center/${center.slug}`}
-                    className="flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(243,50,85,0.22)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98]"
-                    style={{ backgroundColor: "#f33255" }}
+                    href={`/centers/${center.slug}`}
+                    className="flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(14,125,232,0.22)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98]"
+                    style={{ backgroundColor: "#0e7de8" }}
                   >
                     <Images className="size-4" />
                     View Center

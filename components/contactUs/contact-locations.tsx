@@ -30,8 +30,8 @@ export function ContactLocations() {
     <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
       {/* Decorators */}
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/8 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/8 blur-3xl" />
-      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#f33255] to-transparent opacity-40" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/8 blur-3xl" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#0e7de8] to-transparent opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -42,7 +42,7 @@ export function ContactLocations() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#f33255]">
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0e7de8]">
             Find Us
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#201657] sm:text-4xl lg:text-5xl">
@@ -113,8 +113,8 @@ export function ContactLocations() {
                 {/* View Details button */}
                 <div className="mt-auto pt-2">
                   <Link
-                    href={`/our-center/${center.slug}`}
-                    className="flex w-full items-center justify-center gap-2 rounded-full border-2 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(243,50,85,0.18)] active:scale-[0.98]"
+                    href={`/centers/${center.slug}`}
+                    className="flex w-full items-center justify-center gap-2 rounded-full border-2 px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(14,125,232,0.18)] active:scale-[0.98]"
                     style={{
                       borderColor: center.accentColor,
                       color: center.accentColor,

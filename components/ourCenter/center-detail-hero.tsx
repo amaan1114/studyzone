@@ -26,14 +26,14 @@ export function CenterDetailHero({ center, otherCenters }: CenterDetailHeroProps
     <section className="relative overflow-hidden bg-white dark:bg-slate-900">
       <div
         className="absolute inset-0 opacity-[0.04]"
-        style={{ background: `radial-gradient(ellipse at 20% 50%, ${center.accentColor}, transparent 60%), radial-gradient(ellipse at 80% 50%, #f33255, transparent 60%)` }}
+        style={{ background: `radial-gradient(ellipse at 20% 50%, ${center.accentColor}, transparent 60%), radial-gradient(ellipse at 80% 50%, #0e7de8, transparent 60%)` }}
       />
       <div className="absolute -left-20 top-10 h-80 w-80 rounded-full blur-3xl opacity-10" style={{ backgroundColor: center.accentColor }} />
-      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#0e7de8]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
-          <Link href="/our-center" className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 transition-colors hover:text-[#f33255]">
+          <Link href="/centers" className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 transition-colors hover:text-[#0e7de8]">
             <ArrowLeft className="size-3.5" />All Centers
           </Link>
         </motion.div>
@@ -84,12 +84,12 @@ export function CenterDetailHero({ center, otherCenters }: CenterDetailHeroProps
 
             <motion.div variants={itemVariants} className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={`tel:${center.phone.replace(/\s/g, "")}`}
-                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(243,50,85,0.25)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98]"
-                style={{ backgroundColor: "#f33255" }}>
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(14,125,232,0.25)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98]"
+                style={{ backgroundColor: "#0e7de8" }}>
                 <Phone className="size-4" />Contact Us<ArrowRight className="size-4" />
               </a>
               <a href={`mailto:${center.email}`}
-                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255] active:scale-[0.98]">
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#201657]/15 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8] active:scale-[0.98]">
                 <Mail className="size-4" />Send Email
               </a>
             </motion.div>
@@ -123,7 +123,7 @@ export function CenterDetailHero({ center, otherCenters }: CenterDetailHeroProps
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Other Centers</p>
                 <div className="space-y-2">
                   {otherCenters.map((other) => (
-                    <Link key={other.slug} href={`/our-center/${other.slug}`}
+                    <Link key={other.slug} href={`/centers/${other.slug}`}
                       className="flex items-center gap-3 rounded-xl border border-slate-100 dark:border-slate-700 bg-[#f8fafc] dark:bg-slate-800 px-4 py-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-200 dark:hover:border-slate-600 hover:bg-white dark:hover:bg-slate-700 hover:shadow-sm">
                       <div className="flex size-8 shrink-0 items-center justify-center rounded-lg opacity-80"
                         style={{ backgroundColor: `${other.accentColor}18` }}>

@@ -16,8 +16,8 @@ const team = [
     role: "Operations Director",
     bio: "Anita brings her expertise in facility management and student engagement to ensure the highest quality experience.",
     initials: "AP",
-    accentColor: "#f33255",
-    bgColor: "bg-[#f33255]/10",
+    accentColor: "#0e7de8",
+    bgColor: "bg-[#0e7de8]/10",
   },
   {
     name: "Suresh Menon",
@@ -54,7 +54,7 @@ export function TeamSection() {
     <section className="relative overflow-hidden bg-[#f8fafc] dark:bg-slate-800 py-20 sm:py-24 lg:py-28">
       {/* Decorative blobs */}
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0e7de8]/10 blur-3xl" />
       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#1064c7] to-transparent opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export function TeamSection() {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#f33255]">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0e7de8]">
               The People Behind It
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-4xl lg:text-5xl">
@@ -83,7 +83,7 @@ export function TeamSection() {
               <motion.article
                 key={member.name}
                 variants={itemVariants}
-                className="group flex flex-col rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f33255]/25 hover:shadow-[0_22px_55px_rgba(15,23,42,0.08)]"
+                className="group flex flex-col rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-7 shadow-[0_14px_40px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0e7de8]/25 hover:shadow-[0_22px_55px_rgba(15,23,42,0.08)]"
               >
                 {/* Avatar placeholder */}
                 <div className="flex items-center gap-4">
@@ -97,11 +97,6 @@ export function TeamSection() {
                       {member.initials}
                     </span>
                   </div>
-
-                  {/* Image slot — swap the div above for an <Image> when photos are ready */}
-                  {/* <div className="size-16 shrink-0 overflow-hidden rounded-[1.25rem]">
-                    <Image src={member.image} alt={member.name} width={64} height={64} className="object-cover" />
-                  </div> */}
 
                   <div>
                     <h3 className="text-lg font-bold tracking-tight text-[#201657] dark:text-white">

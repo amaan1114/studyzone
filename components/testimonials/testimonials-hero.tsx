@@ -47,9 +47,9 @@ const stars = Array.from({ length: 5 });
 export function TestimonialsHero() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900">
-      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/6 via-white to-[#f33255]/6 dark:via-slate-900" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#1064c7]/6 via-white to-[#0e7de8]/6 dark:via-slate-900" />
       <div className="absolute -left-20 top-10 h-80 w-80 rounded-full bg-[#1064c7]/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#f33255]/10 blur-3xl" />
+      <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[#0e7de8]/10 blur-3xl" />
       <div className="absolute right-1/3 top-1/3 h-60 w-60 rounded-full bg-[#201657]/5 blur-3xl" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -64,9 +64,9 @@ export function TestimonialsHero() {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 rounded-full border border-[#f33255]/15 dark:border-[#f33255]/25 bg-white/80 dark:bg-slate-900/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#f33255] shadow-sm backdrop-blur"
+              className="inline-flex items-center gap-2 rounded-full border border-[#0e7de8]/15 dark:border-[#0e7de8]/25 bg-white/80 dark:bg-slate-900/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0e7de8] shadow-sm backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-[#f33255]" />
+              <span className="h-2 w-2 rounded-full bg-[#0e7de8]" />
               Student Success Stories
             </motion.div>
 
@@ -76,7 +76,7 @@ export function TestimonialsHero() {
               className="mt-6 text-4xl font-bold tracking-tight text-[#201657] dark:text-white sm:text-5xl lg:text-6xl"
             >
               Hear from our{" "}
-              <span className="text-[#f33255]">members.</span>
+              <span className="text-[#0e7de8]">members.</span>
             </motion.h1>
 
             {/* Subtext */}
@@ -93,7 +93,7 @@ export function TestimonialsHero() {
               variants={itemVariants}
               className="mt-7 flex items-center gap-3"
             >
-              <div className="flex items-center gap-0.5 text-[#f33255]">
+              <div className="flex items-center gap-0.5 text-[#0e7de8]">
                 {stars.map((_, i) => (
                   <Star key={i} className="size-5 fill-current" />
                 ))}
@@ -110,14 +110,14 @@ export function TestimonialsHero() {
             >
               <a
                 href="#testimonials"
-                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#f33255] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(243,50,85,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e62c4d] active:scale-[0.98]"
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#0e7de8] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(14,125,232,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0a6fd4] active:scale-[0.98]"
               >
                 Read Stories
                 <ArrowRight className="size-4" />
               </a>
               <Link
-                href="/our-center"
-                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-700 bg-white dark:bg-slate-900 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f33255] hover:text-[#f33255] active:scale-[0.98]"
+                href="/centers"
+                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-[#201657]/15 dark:border-slate-700 bg-white dark:bg-slate-900 px-6 py-3 text-sm font-semibold text-[#201657] dark:text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0e7de8] hover:text-[#0e7de8] active:scale-[0.98]"
               >
                 Explore Centers
               </Link>
@@ -131,7 +131,7 @@ export function TestimonialsHero() {
 
               {/* Quote preview */}
               <div className="mb-5 rounded-[1.5rem] border border-slate-100 dark:border-slate-700 bg-[#f8fafc] dark:bg-slate-800 p-5">
-                <Quote className="size-5 text-[#f33255]/40" />
+                <Quote className="size-5 text-[#0e7de8]/40" />
                 <p className="mt-2 text-sm leading-7 text-slate-500 dark:text-slate-400 italic">
                   &quot;The environment is welcoming, well-organized, and conducive to learning. I would gladly recommend the center to others.&quot;
                 </p>
@@ -159,7 +159,7 @@ export function TestimonialsHero() {
                         <p className="text-2xl font-bold tracking-tight text-[#1064c7]">
                           {card.value}
                         </p>
-                        <div className="flex size-9 items-center justify-center rounded-full bg-[#f33255]/10 text-[#f33255]">
+                        <div className="flex size-9 items-center justify-center rounded-full bg-[#0e7de8]/10 text-[#0e7de8]">
                           <Icon className="size-4" />
                         </div>
                       </div>
